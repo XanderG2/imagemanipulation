@@ -1,7 +1,7 @@
 from PIL import Image
 from math import ceil
 
-with open("data.txt", "r") as f:
+with open("data/data.txt", "r") as f:
     data = f.read()
 
 length = ceil(len(data) / 3)
@@ -25,4 +25,4 @@ for col in range(answer):
             pixels[row,col] = (0, 0, 0)
         i += 3
 
-img.save("data.png")
+img.save("data/data.png")

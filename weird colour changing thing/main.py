@@ -1,7 +1,7 @@
 from PIL import Image
 from random import randint
 
-with Image.open('canyon.jpg') as im:
+with Image.open('img/canyon.jpg') as im:
     pix = im.load()
     width, height = im.size
     gstart = randint(0,(height//4)*3)
@@ -19,4 +19,4 @@ with Image.open('canyon.jpg') as im:
             newpixel = [0,0,0]
             newpixel[color] = oldpixel[0]
             pix[char, row] = tuple(newpixel)
-    im.save('canyon2.jpg')
+    im.save('img/canyon2.jpg')

@@ -2,7 +2,7 @@ from PIL import Image
 
 chrs = []
 
-with Image.open('data.png') as im:
+with Image.open('data/data.png') as im:
     pix = im.load()
     width, height = im.size
     for row in range(height):
@@ -13,5 +13,5 @@ with Image.open('data.png') as im:
 
 string = "".join(chrs)
 
-with open("output.txt", "w") as f:
+with open("data/output.txt", "w") as f:
     f.write(string)
